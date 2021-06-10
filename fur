@@ -1,0 +1,256 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local fur = Instance.new("ScreenGui")
+local menu = Instance.new("Frame")
+local barrier = Instance.new("TextButton")
+local spawn = Instance.new("TextButton")
+local escape = Instance.new("TextButton")
+local bandithub = Instance.new("TextLabel")
+local speed = Instance.new("TextLabel")
+local speed2 = Instance.new("TextBox")
+local goop = Instance.new("TextButton")
+
+--Properties:
+
+fur.Name = "fur"
+fur.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+fur.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+menu.Name = "menu"
+menu.Parent = fur
+menu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+menu.Position = UDim2.new(0.025056947, 0, 0.722358704, 0)
+menu.Size = UDim2.new(0, 366, 0, 187)
+menu.Style = Enum.FrameStyle.RobloxSquare
+
+barrier.Name = "barrier"
+barrier.Parent = menu
+barrier.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+barrier.Position = UDim2.new(0.783067465, 0, 0.634464741, 0)
+barrier.Size = UDim2.new(0, 70, 0, 53)
+barrier.Font = Enum.Font.SourceSans
+barrier.Text = "Remove Barriers"
+barrier.TextColor3 = Color3.fromRGB(0, 0, 0)
+barrier.TextScaled = true
+barrier.TextSize = 14.000
+barrier.TextWrapped = true
+
+spawn.Name = "spawn"
+spawn.Parent = menu
+spawn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spawn.Position = UDim2.new(0.0628415346, 0, 0.71122992, 0)
+spawn.Size = UDim2.new(0, 131, 0, 41)
+spawn.Font = Enum.Font.SourceSans
+spawn.Text = "Spawn"
+spawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+spawn.TextScaled = true
+spawn.TextSize = 14.000
+spawn.TextWrapped = true
+
+escape.Name = "escape"
+escape.Parent = menu
+escape.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+escape.Position = UDim2.new(0.0451342501, 0, 0.13804552, 0)
+escape.Size = UDim2.new(0, 142, 0, 44)
+escape.Font = Enum.Font.SourceSans
+escape.Text = "Meltdown Exit"
+escape.TextColor3 = Color3.fromRGB(0, 0, 0)
+escape.TextScaled = true
+escape.TextSize = 14.000
+escape.TextWrapped = true
+
+bandithub.Name = "bandithub"
+bandithub.Parent = menu
+bandithub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bandithub.Position = UDim2.new(0.0300546456, 0, -0.235294119, 0)
+bandithub.Size = UDim2.new(0, 200, 0, 50)
+bandithub.Font = Enum.Font.Roboto
+bandithub.Text = "BanditHub"
+bandithub.TextColor3 = Color3.fromRGB(0, 0, 0)
+bandithub.TextScaled = true
+bandithub.TextSize = 14.000
+bandithub.TextWrapped = true
+
+speed.Name = "speed"
+speed.Parent = menu
+speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+speed.Position = UDim2.new(0.641464353, 0, 0.150962144, 0)
+speed.Size = UDim2.new(0, 104, 0, 42)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "Set Speed"
+speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+speed2.Name = "speed2"
+speed2.Parent = menu
+speed2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+speed2.Position = UDim2.new(0.689793646, 0, 0.402184784, 0)
+speed2.Size = UDim2.new(0, 70, 0, 26)
+speed2.Font = Enum.Font.SourceSans
+speed2.Text = ""
+speed2.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed2.TextSize = 14.000
+
+goop.Name = "goop"
+goop.Parent = menu
+goop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goop.Position = UDim2.new(0.5353145, 0, 0.639196694, 0)
+goop.Size = UDim2.new(0, 77, 0, 52)
+goop.Font = Enum.Font.SourceSans
+goop.Text = "Remove Transform Slime"
+goop.TextColor3 = Color3.fromRGB(0, 0, 0)
+goop.TextScaled = true
+goop.TextSize = 14.000
+goop.TextWrapped = true
+
+-- Scripts:
+
+local function PVDKXW_fake_script() -- barrier.removebarrier 
+	local script = Instance.new('LocalScript', barrier)
+
+	local barrier = game.Workspace:WaitForChild("Model"):GetChildren()
+	
+	for _, v in pairs(barrier) do
+		if v.Name == "Forcefield" then
+			v:Destroy()
+		end
+	end
+end
+coroutine.wrap(PVDKXW_fake_script)()
+local function ALMX_fake_script() -- spawn.tp 
+	local script = Instance.new('LocalScript', spawn)
+
+	wait(1)
+	player = game.Players.LocalPlayer
+	button = script.Parent
+	local debounce = false
+	
+	function teleport()
+		if not debounce then
+			debounce = true
+			LowerTorso = player.Character.LowerTorso
+			LowerTorso.CFrame = game.Workspace.spwn.CFrame
+		end
+	end
+	
+	button.MouseButton1Click:Connect(teleport)
+	while true do wait()
+		debounce = false
+		wait(1)
+	end
+end
+coroutine.wrap(ALMX_fake_script)()
+local function SARVRKZ_fake_script() -- escape.tp2 
+	local script = Instance.new('LocalScript', escape)
+
+	wait(1)
+	player = game.Players.LocalPlayer
+	button = script.Parent
+	local debounce = false
+	
+	function teleport()
+		if not debounce then
+			debounce = true
+			LowerTorso = player.Character.LowerTorso
+			LowerTorso.CFrame = game.Workspace.exit.CFrame
+		end
+	end
+	
+	button.MouseButton1Click:Connect(teleport)
+	while true do wait()
+		debounce = false
+		wait(1)
+	end
+end
+coroutine.wrap(SARVRKZ_fake_script)()
+local function YVXNV_fake_script() -- menu.toggle 
+	local script = Instance.new('LocalScript', menu)
+
+	local frame = script.Parent
+	game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+		if key == "e" then
+			if frame.Visible == true then
+				frame.Visible = false
+			else
+				frame.Visible = true
+			end
+		end
+	end)
+	
+	
+end
+coroutine.wrap(YVXNV_fake_script)()
+local function WBQLV_fake_script() -- menu.Notify 
+	local script = Instance.new('LocalScript', menu)
+
+	local function callback(Text)
+		if Text == "Button1 text" then
+			print ("Answer")
+		elseif Text == ("Button2 text") then
+			print ("Answer2")
+		end
+	end
+	
+	local NotificationBindable = Instance.new("BindableFunction")
+	NotificationBindable.OnInvoke = callback
+	--
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "BanditHub";
+		Text = "Bandit Hub has successfully loaded, press E to toggle.";
+		Icon = "";
+		Duration = 5;
+		Button1 = "ok";
+		Callback = NotificationBindable;
+	})
+	
+end
+coroutine.wrap(WBQLV_fake_script)()
+local function HFKQBYP_fake_script() -- speed2.setspeed 
+	local script = Instance.new('LocalScript', speed2)
+
+	local speed = game.Players.LocalPlayer.Status.Speed
+	
+	script.Parent.FocusLost:Connect(function(enter)
+		if enter then
+			speed.Value = script.Parent.Text 
+		end
+	end)
+end
+coroutine.wrap(HFKQBYP_fake_script)()
+local function ROCPCZ_fake_script() -- menu.exit 
+	local script = Instance.new('LocalScript', menu)
+
+	local exit = Instance.new("Part")
+	exit.Transparency = 1
+	exit.Name = exit
+	exit.Anchored = true	
+	exit.CanCollide = false
+	exit.Position = Vector3.new(-225, 18, 16)
+	
+	exit = game.Workspace
+end
+coroutine.wrap(ROCPCZ_fake_script)()
+local function NBAQBUT_fake_script() -- menu.spawn 
+	local script = Instance.new('LocalScript', menu)
+
+	local spwn = Instance.new("Part")
+	spwn.Transparency = 1
+	spwn.Name = spwn
+	spwn.Anchored = true	
+	spwn.CanCollide = false
+	spwn.Position = Vector3.new(-873, 4, -71)
+	
+	spwn = game.Workspace
+end
+coroutine.wrap(NBAQBUT_fake_script)()
+local function OWOBRE_fake_script() -- goop.removegoop 
+	local script = Instance.new('LocalScript', goop)
+
+	game.Workspace.Goop:Destroy()
+end
+coroutine.wrap(OWOBRE_fake_script)()
