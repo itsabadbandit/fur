@@ -110,10 +110,10 @@ goop.TextWrapped = true
 
 -- Scripts:
 
-local function PVDKXW_fake_script() -- barrier.removebarrier 
+local function BKXLAF_fake_script() -- barrier.removebarrier 
 	local script = Instance.new('LocalScript', barrier)
 
-	local barrier = game.Workspace:WaitForChild("Model"):GetChildren()
+	local barrier = game.Workspace:WaitForChild("Map"):GetChildren()
 	
 	for _, v in pairs(barrier) do
 		if v.Name == "Forcefield" then
@@ -121,8 +121,8 @@ local function PVDKXW_fake_script() -- barrier.removebarrier
 		end
 	end
 end
-coroutine.wrap(PVDKXW_fake_script)()
-local function ALMX_fake_script() -- spawn.tp 
+coroutine.wrap(BKXLAF_fake_script)()
+local function PHGYPRU_fake_script() -- spawn.tp 
 	local script = Instance.new('LocalScript', spawn)
 
 	wait(1)
@@ -133,8 +133,8 @@ local function ALMX_fake_script() -- spawn.tp
 	function teleport()
 		if not debounce then
 			debounce = true
-			LowerTorso = player.Character.LowerTorso
-			LowerTorso.CFrame = game.Workspace.spwn.CFrame
+			Torso = player.Character.Torso
+			Torso.CFrame = game.Workspace.spwn.CFrame
 		end
 	end
 	
@@ -144,8 +144,8 @@ local function ALMX_fake_script() -- spawn.tp
 		wait(1)
 	end
 end
-coroutine.wrap(ALMX_fake_script)()
-local function SARVRKZ_fake_script() -- escape.tp2 
+coroutine.wrap(PHGYPRU_fake_script)()
+local function RGJFHT_fake_script() -- escape.tp2 
 	local script = Instance.new('LocalScript', escape)
 
 	wait(1)
@@ -156,8 +156,8 @@ local function SARVRKZ_fake_script() -- escape.tp2
 	function teleport()
 		if not debounce then
 			debounce = true
-			LowerTorso = player.Character.LowerTorso
-			LowerTorso.CFrame = game.Workspace.exit.CFrame
+			Torso = player.Character.Torso
+			Torso.CFrame = game.Workspace.exit.CFrame
 		end
 	end
 	
@@ -167,8 +167,8 @@ local function SARVRKZ_fake_script() -- escape.tp2
 		wait(1)
 	end
 end
-coroutine.wrap(SARVRKZ_fake_script)()
-local function YVXNV_fake_script() -- menu.toggle 
+coroutine.wrap(RGJFHT_fake_script)()
+local function DJMVJYK_fake_script() -- menu.toggle 
 	local script = Instance.new('LocalScript', menu)
 
 	local frame = script.Parent
@@ -184,8 +184,8 @@ local function YVXNV_fake_script() -- menu.toggle
 	
 	
 end
-coroutine.wrap(YVXNV_fake_script)()
-local function WBQLV_fake_script() -- menu.Notify 
+coroutine.wrap(DJMVJYK_fake_script)()
+local function TJLQJG_fake_script() -- menu.Notify 
 	local script = Instance.new('LocalScript', menu)
 
 	local function callback(Text)
@@ -209,8 +209,8 @@ local function WBQLV_fake_script() -- menu.Notify
 	})
 	
 end
-coroutine.wrap(WBQLV_fake_script)()
-local function HFKQBYP_fake_script() -- speed2.setspeed 
+coroutine.wrap(TJLQJG_fake_script)()
+local function LSVP_fake_script() -- speed2.setspeed 
 	local script = Instance.new('LocalScript', speed2)
 
 	local speed = game.Players.LocalPlayer.Status.Speed
@@ -221,8 +221,8 @@ local function HFKQBYP_fake_script() -- speed2.setspeed
 		end
 	end)
 end
-coroutine.wrap(HFKQBYP_fake_script)()
-local function ROCPCZ_fake_script() -- menu.exit 
+coroutine.wrap(LSVP_fake_script)()
+local function OOBLF_fake_script() -- menu.exit 
 	local script = Instance.new('LocalScript', menu)
 
 	local exit = Instance.new("Part")
@@ -234,8 +234,8 @@ local function ROCPCZ_fake_script() -- menu.exit
 	
 	exit = game.Workspace
 end
-coroutine.wrap(ROCPCZ_fake_script)()
-local function NBAQBUT_fake_script() -- menu.spawn 
+coroutine.wrap(OOBLF_fake_script)()
+local function BXIYB_fake_script() -- menu.spawn 
 	local script = Instance.new('LocalScript', menu)
 
 	local spwn = Instance.new("Part")
@@ -247,10 +247,10 @@ local function NBAQBUT_fake_script() -- menu.spawn
 	
 	spwn = game.Workspace
 end
-coroutine.wrap(NBAQBUT_fake_script)()
-local function OWOBRE_fake_script() -- goop.removegoop 
+coroutine.wrap(BXIYB_fake_script)()
+local function DDSULQT_fake_script() -- goop.removegoop 
 	local script = Instance.new('LocalScript', goop)
 
 	game.Workspace.Goop:Destroy()
 end
-coroutine.wrap(OWOBRE_fake_script)()
+coroutine.wrap(DDSULQT_fake_script)()
